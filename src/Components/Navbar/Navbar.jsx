@@ -25,7 +25,7 @@ const Navbar = ({search, setSearch, searchproduct}) => {
             <img src={logo} alt='logo'></img>
           </div>
           <div className='search_box'>
-            <input type='text' value={search} placeholder='searh' onChange={(e) => setSearch(e.target.value)}></input>
+            <input type='text' value={search} placeholder='search' onChange={(e) => setSearch(e.target.value)}></input>
             <button onClick={searchproduct}><AiOutlineSearch /></button>
           </div>
           {
@@ -71,7 +71,7 @@ const Navbar = ({search, setSearch, searchproduct}) => {
                 <CiUser />
               </div>
               <div className='info'>
-                <p>Please Login</p>
+              
               </div>
               </>
             }
