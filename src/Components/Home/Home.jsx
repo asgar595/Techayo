@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom'
 import Homeproduct from './Homeproduct'
 import { AiFillEye, AiFillHeart, AiOutlineShoppingCart} from "react-icons/ai";
 import {BiLogoFacebook, BiLogoTwitter, BiLogoInstagram, BiLogoYoutube} from "react-icons/bi";
-import image1 from '../../Image/Multi-Banner-1.avif';
+
 
 import image3 from '../../Image/Multi-Banner-3.webp';
-import image4 from '../../Image/Multi-Banner-4.avif';
+
 import image5 from '../../Image/Multi-Banner-5.webp'
 import testimonialimage from '../../Image/T1.avif';
 const Home = ({addtocart}) => {
@@ -176,7 +176,7 @@ const Home = ({addtocart}) => {
           <div className='container'>
             <div className='left_box'>
               <div className='box'>
-                <img src={image1} alt='banner'></img>
+              
               </div>
               <div className='box'>
                
@@ -185,7 +185,7 @@ const Home = ({addtocart}) => {
             <div className='right_box'>
               <div className='top'>
                 <img src={image3} alt=''></img>
-                <img src={image4} alt=''></img>
+               
               </div>
               <div className='bottom'>
                 <img src={image5} alt=''></img>
