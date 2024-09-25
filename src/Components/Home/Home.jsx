@@ -154,7 +154,7 @@ const Home = ({addtocart}) => {
                     <button>subscribe</button>
                     <div className='icon_box'>
                       <div className='icon'>
-                        <BiLogoFacebook />
+                        <BiLogoFacebook/>
                       </div>
                       <div className='icon'>
                         <BiLogoTwitter />
@@ -179,7 +179,7 @@ const Home = ({addtocart}) => {
                 <img src={image1} alt='banner'></img>
               </div>
               <div className='box'>
-                <img src={image2} alt='banner'></img>
+              
               </div>
             </div>
             <div className='right_box'>
