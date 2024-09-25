@@ -10,6 +10,7 @@ import image2 from '../../Image/Multi-Banner-2.avif';
 import image3 from '../../Image/Multi-Banner-3.webp';
 import image4 from '../../Image/Multi-Banner-4.avif';
 import image5 from '../../Image/Multi-Banner-5.webp'
+import testimonialimage from '../../Image/T1.avif';
 const Home = ({addtocart}) => {
 
   const [clickedIndexes, setClickedIndexes] = useState({});
@@ -134,7 +135,7 @@ const Home = ({addtocart}) => {
                   </div>
                   <div className='detail'>
                     <div className='img_box'>
-                      <img src='image/T1.avif' alt='testmonial'></img>
+                      <img src={testimonialimage} alt='testmonial'></img>
                     </div>
                     <div className='info'>
                       <h3>stephan robot</h3>
