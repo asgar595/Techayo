@@ -6,7 +6,7 @@ import Homeproduct from './Homeproduct'
 import { AiFillEye, AiFillHeart, AiOutlineShoppingCart} from "react-icons/ai";
 import {BiLogoFacebook, BiLogoTwitter, BiLogoInstagram, BiLogoYoutube} from "react-icons/bi";
 import image1 from '../../Image/Multi-Banner-1.avif';
-import image2 from '../../Image/Multi-Banner-2.avif';
+import bannerimage from '../../Image/Multi-Banner-2.avif';
 import image3 from '../../Image/Multi-Banner-3.webp';
 import image4 from '../../Image/Multi-Banner-4.avif';
 import image5 from '../../Image/Multi-Banner-5.webp'
@@ -179,7 +179,7 @@ const Home = ({addtocart}) => {
                 <img src={image1} alt='banner'></img>
               </div>
               <div className='box'>
-              
+                <img src={bannerimage} alt='banner'></img>
               </div>
             </div>
             <div className='right_box'>
