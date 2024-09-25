@@ -5,7 +5,21 @@ import { Link } from 'react-router-dom'
 import Homeproduct from './Homeproduct'
 import { AiFillEye, AiFillHeart, AiOutlineShoppingCart} from "react-icons/ai";
 import {BiLogoFacebook, BiLogoTwitter, BiLogoInstagram, BiLogoYoutube} from "react-icons/bi";
+import image1 from '../../Image/Multi-Banner-1.avif';
+import image2 from '../../Image/Multi-Banner-2.avif';
+import image3 from '../../Image/Multi-Banner-3.webp';
+import image4 from '../../Image/Multi-Banner-4.avif';
+import image5 from '../../Image/Multi-Banner-5.webp'
 const Home = ({addtocart}) => {
+
+  const [clickedIndexes, setClickedIndexes] = useState({});
+  const handleClick = (index) => {
+    setClickedIndexes((prevState) => ({
+      ...prevState,
+      [index]: !prevState[index], // Toggle true/false for the clicked index
+    }));
+  };
+
   // Product category
   const [newProduct, setNewProduct] =  useState([])
   const [featuredProduct, setFeaturdProduct] =  useState([])
@@ -161,19 +175,19 @@ const Home = ({addtocart}) => {
           <div className='container'>
             <div className='left_box'>
               <div className='box'>
-                <img src='image/Multi-Banner-1.avif' alt='banner'></img>
+                <img src={image1} alt='banner'></img>
               </div>
               <div className='box'>
-                <img src='image/Multi-Banner-2.avif' alt='banner'></img>
+                <img src={image2} alt='banner'></img>
               </div>
             </div>
             <div className='right_box'>
               <div className='top'>
-                <img src='image/Multi-Banner-3.webp' alt=''></img>
-                <img src='image/Multi-Banner-4.avif' alt=''></img>
+                <img src={image3} alt=''></img>
+                <img src={image4} alt=''></img>
               </div>
               <div className='bottom'>
-                <img src='image/Multi-Banner-5.webp' alt=''></img>
+                <img src={image5} alt=''></img>
               </div>
             </div>
           </div>
@@ -241,7 +255,7 @@ const Home = ({addtocart}) => {
                 <h2>Top Product</h2>
               </div>
               {
-                topProduct.map((curElm) => 
+                topProduct.map((curElm,i) => 
                 {
                   return(
                     <>
@@ -253,8 +267,8 @@ const Home = ({addtocart}) => {
                         <h3>{curElm.Name}</h3>
                         <p>$ {curElm.price}</p>
                         <div className='icon'>
-                          <button><AiFillEye /></button>
-                          <button><AiFillHeart /></button>
+                          <button onClick={()=>handleClick(i)}><AiFillEye style={{ color: clickedIndexes[i] ? 'black' : 'inherit', fontSize: '14px' }} /></button>
+                          <button ><AiFillHeart /></button>
                           <button onClick={() => addtocart (curElm)}><AiOutlineShoppingCart /></button>
                         </div>
                       </div>
